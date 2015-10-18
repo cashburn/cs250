@@ -3,7 +3,7 @@
 .section .data
 		arg1: .asciz "%s"
 		arg2: .space 100
-		string: .asciz "Hello World!"
+		string: .asciz "Hello, World!"
 .section .text
 .globl	main
 main:
