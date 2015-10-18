@@ -5,6 +5,7 @@
 		string: .asciz "Hello, World!\n"
 .section .text
 .global	main
+main:
 	ldr r0, =string
 	bl printf
 	.end
