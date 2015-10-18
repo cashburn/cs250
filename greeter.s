@@ -2,8 +2,8 @@
 @demo program
 .section .data
 .section .text
-.globl	_start
-_start:
+.global	main
+main:
 
 mov r7, $1
 svc $0
