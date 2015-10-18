@@ -5,9 +5,7 @@
 		string: .asciz "Hello, World!\n"
 .section .text
 .global	main
-main:
-	push {ip, lr}
 	ldr r0, =string
 	bl printf
-
-	pop {ip, pc}
+	.end
+	
