@@ -13,3 +13,4 @@ main:
 		arg1: .asciz "%s"
 		arg2: .space 100
 		string: .asciz "Hello, World!"
+		
