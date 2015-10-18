@@ -11,4 +11,6 @@ main:
 	bl printf
 
 	pop {ip, pc}
+mov r7, $1
+svc $0
 .end
