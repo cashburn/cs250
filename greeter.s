@@ -1,9 +1,5 @@
 @greeter.s
-.section .data
-		arg1: .asciz "%s"
-		arg2: .space 100
-		string: .asciz "Hello, World!"
-.section .text
+.text
 .global	main
 .extern printf
 main:
@@ -12,3 +8,8 @@ main:
 	bl printf
 
 	pop {ip, pc}
+
+.data
+		arg1: .asciz "%s"
+		arg2: .space 100
+		string: .asciz "Hello, World!"
