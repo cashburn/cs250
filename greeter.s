@@ -2,9 +2,9 @@
 .section .data
 		inputFormat: .asciz "%s"
 		input: .space 100
-		progName .asciz "** Greeter **\n"
-		prompt .asciz "Please enter your name: "
-		greeting .asciz "Hello %s"
+		progName: .asciz "** Greeter **\n"
+		prompt: .asciz "Please enter your name: "
+		greeting: .asciz "Hello %s"
 .section .text
 .global	main
 main:
