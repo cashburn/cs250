@@ -4,7 +4,7 @@
 		input: .space 100
 		progName: .asciz "** Greeter **\n"
 		prompt: .asciz "Please enter your name: "
-		greeting: .asciz "Hello %s"
+		greeting: .asciz "Hello %s\n"
 .section .text
 .global	main
 main:
