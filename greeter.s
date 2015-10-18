@@ -8,20 +8,21 @@
 .section .text
 .global	main
 main:
-	push {ip, lr}
+	push {ip, lr} 
+
 	ldr r0, =progName
-	bl printf
+	bl printf				//Print "** Greeter **""
 	ldr r0, =prompt
-	bl printf
+	bl printf				//Prompt user for name
 	ldr r0, =inputFormat
 	ldr r1, =input
-	bl scanf
+	bl scanf				//Scanf for input string
 	ldr r0, =greeting
 	ldr r1, =input
-	bl printf
+	bl printf				//Print out "Hello <name>""
 
 	pop {ip, pc}
 
-	mov r0, $0
+	mov r0, $0				//exit code
 	mov r7, $1
 	swi $0
