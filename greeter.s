@@ -2,7 +2,7 @@
 .section .data
 		arg1: .asciz "%s"
 		arg2: .space 100
-		string: .asciz "Hello, World!"
+		string: .asciz "Hello, World!\n"
 .section .text
 .global	main
 main:
