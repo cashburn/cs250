@@ -11,7 +11,6 @@ main:
 	bl printf
 	pop {ip, pc}
 
-	mov     %r0, $0     /* status -> 0 */
+	mov r0, $0
 	mov r7, $1
 	svc $0
-.end
