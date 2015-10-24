@@ -1,4 +1,3 @@
- ln -s "$HOME/.dot/background.png" "$HOME/Pictures/background.png"   #Just a nice photo I took that I like to use for backgrounds.  TODO: Comment out and delete the picture in .dot if you want.
 #include <stdio.h>
 #include <wiringPi.h>
 #include <softPwm.h>
@@ -9,6 +8,8 @@
 #define BUTTONR 25
 #define BUTTONG 24
 #define BUTTONB 23
+#define PLUS 21
+#define MINUS 22
 int main(void) {
 	if(wiringPiSetup() == -1)       //begin setup()
         return 1;
