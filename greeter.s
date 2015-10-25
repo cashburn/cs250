@@ -20,9 +20,6 @@ main:
 	ldr r0, =greeting
 	ldr r1, =input
 	bl printf				//Print out "Hello <name>""
-
+    mov r0, $0              //exit code
 	pop {ip, pc}
 
-	mov r0, $0				//exit code
-	mov r7, $1
-	swi $0
