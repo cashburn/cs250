@@ -1,9 +1,9 @@
-@greeter.s
+@greater.s
 .section .data
 		.balign 4
-        inputFormat: .asciz "%s"
+        inputFormat: .asciz "%d"
 		.balign 4
-        input: .space 100
+        input: .word 0
 		.balign 4
         progName: .asciz "** Greater Than **\n"
 		.balign 4
@@ -11,7 +11,7 @@
 		.balign 4
 		prompt2: .asciz "Please enter the second number: "
 		.balign 4
-	result: .asciz "Greater: %s\n"
+	result: .asciz "Greater: %d\n"
 .section .text
 .global	main
 main:
@@ -26,13 +26,15 @@ main:
 	ldr r1, =input
 	bl scanf				//Scanf for input1
     ldr r4, =input
-    b print
+    ldr r4, [r4]
+	
     ldr r0, =prompt2
 	bl printf				//Prompt user for second num
 	ldr r0, =inputFormat
 	ldr r1, =input
 	bl scanf				//Scanf for input2
     ldr r5, =input
+    ldr r5, [r5]
 
     cmp r4, r5
     blt less
@@ -41,7 +43,6 @@ main:
 
 less: add r1, r5, $0
 print:
-    ldr r1, =input
     ldr r0, =result
 	bl printf				//Print out greater
     
