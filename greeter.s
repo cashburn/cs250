@@ -14,12 +14,14 @@ main:
 	bl printf				//Print "** Greeter **""
 	ldr r0, =prompt
 	bl printf				//Prompt user for name
-	ldr r0, =inputFormat
+	
+    ldr r0, =inputFormat
 	ldr r1, =input
 	bl scanf				//Scanf for input string
 	ldr r0, =greeting
 	ldr r1, =input
 	bl printf				//Print out "Hello <name>""
+    
     mov r0, $0              //exit code
 	pop {ip, pc}
 
