@@ -16,27 +16,26 @@ main:
 loop:	
     ldr r1, =input
     ldr r0, =inputFormat
-    //mul r3, r2, r4           //r3 = mem offset
-    //add r1, r1, r3
-    bl scanf                //Scanf for input1
+    bl scanf                //Scanf for input
+    
     ldr r1, =input
     ldr r1, [r1]
-    cmp r1, $-1
-    pushne {r1}
-    addne r4, r4, $1
-    bne loop
+    cmp r1, $-1             
+    pushne {r1}             //if n != -1, push onto stack
+    addne r4, r4, $1        //count++
+    bne loop                //repeat
     
-    mov r1, $1
+    mov r1, $1              //multiply everything, starting with 1
 poploop:
     mov r0, $1
-    cmp r4, $0
-    popne {r0}
-    mul r1, r1, r0
-    sub r4, r4, $1
-    bne poploop
+    cmp r4, $0              //if count != 0
+    popne {r0}              //pop from stack
+    mul r1, r1, r0          //multiply into r1
+    sub r4, r4, $1          //count--
+    bne poploop             //repeat
 
     ldr r0, =result
-	bl printf				//Print out greater
+	bl printf				//Print out product
     
     mov r0, $0              //exit code
 	pop {ip, pc}
