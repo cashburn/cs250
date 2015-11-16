@@ -64,6 +64,7 @@ int main(void) {
             softPwmWrite(LEDB, value[2]);
         }
         delay(100);
+    
     }
 
 
