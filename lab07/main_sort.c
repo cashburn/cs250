@@ -40,8 +40,8 @@ int main(int argc, char** argv)
 		printf("Enter numbers:\n");
 		for(i=0;i<n;i++)
 			scanf("%d",in+i);
-		//quicksort(in, n);
-		cqs(in, n);
+		quicksort(in, n);
+		//cqs(in, n);
 		printf("After sort:\n");
 		for(i=0;i<n;i++)
 			printf("%d ",in[i]);
