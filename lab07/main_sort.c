@@ -53,12 +53,12 @@ int main(int argc, char** argv)
 			printf("Size: %d\n", n);
 			get_array(in, n);
 			start = get_time();
-			//bubble(in, n);
+			bubble(in, n);
 			stop = get_time();
 			printf("Bubble sort used %.12f secs\n", stop - start);
 			get_array(in ,n);
 			start = get_time();
-			//quicksort(in, n);
+			quicksort(in, n);
 			stop = get_time();
 			printf("Quick sort used %.12f secs\n", stop - start);
 		}
@@ -138,8 +138,8 @@ void check(int *a, int n){
 	memcpy(b, a, sizeof(int)*n);
 	memcpy(c, a, sizeof(int)*n);
 	cqs(a, n);
-	//bubble(b, n);
-	//quicksort(c, n);
+	bubble(b, n);
+	quicksort(c, n);
 	printf("Case %d:\n",cnt++);
 	for(i=0;i<n;i++){
 		int bf = 0;
