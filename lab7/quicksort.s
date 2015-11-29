@@ -41,9 +41,9 @@ partition:
 
 loop:
     cmp r5, r2
+    ldr r7, [r0, r4, lsl $2]    //r7 = a[i]
     bge endPartition            //if !(j < n-1) exit for
     ldr r6, [r0, r5, lsl $2]    //r6 = a[j]
-    ldr r7, [r0, r4, lsl $2]    //r7 = a[i]
     cmp r6, r3                  
     bge endIf                   //if a[j] < pivot then...
 
