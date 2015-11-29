@@ -27,9 +27,9 @@ void memdump(char * p , int len) {
  *  len: the length of dump output
  *
  ***/
-    printf("0x%016LX: ", (unsigned long) p);
+    printf("0x%p: ", (unsigned long) p);
     for (int i = 0; i < len; i++) {
-        printf("%02X ", p[i]&0xFF);
+        printf("%02hhx ", p[i]&0xFF);
         if (((i + 1) % 16) == 0) {
             printf(" ");
             for (int j = (i - 15); j <= i; j++) {
@@ -40,7 +40,7 @@ void memdump(char * p , int len) {
             }
             printf("\n");
             if ((i + 1) < len)
-                printf("0x%016lX: ", (unsigned long) (p + i + 1));
+                printf("0x%p: ", (unsigned long) (p + i + 1));
         }
         else if (((len % 16) != 0) && !((i+1) < len)) {
             for (int j = 0; j < (3 * (16 - (len % 16))) + 1; j++)
