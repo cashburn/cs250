@@ -134,7 +134,7 @@ main() {
     double y;
     int int_array[4];
     struct X x;
-    char *s;
+    char * s;
 
     printf("str:       %p\n", str);
     printf("&a:        %p\n", &a);
