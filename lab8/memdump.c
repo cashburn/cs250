@@ -113,35 +113,7 @@ void free_tree(struct tree_node *root)
     return;
 }
 
-void preorder_traverse(struct tree_node *node)
-/***
- * preorder_traverse traverse tree in preorder,
- * which mean that give a tree B<-A->C, the print out order will be:
- * A, C, B
- *
- * Argument:
- *  node: pointer to struct tree_node
- *
- ***/
-{
-    if(node == NULL)
-    {
-        return;
-    }
-
-    /**This printf just give you an idea how preorder_traverse print out element from tree**/
-    printf("%s ", node->str);
-    
-    /**
-     * You will need to modify this part to dump memory of current tree node.
-     * Remember, you need dump current node, str, left, right. Think carefully what do you actually need to dump here.
-     **/
-
-    preorder_traverse(node->left);
-    preorder_traverse(node->right);
-}
-
-main() {
+int main() {
     char str[20];
     int a;
     int b;
