@@ -16,10 +16,13 @@ int foo() {
 int
 main()
 {
-  int b;
+  int b = 5;
   static int c;
   int * p = (int *) malloc(sizeof(int));
+  *p = 42;
   char * str = "Hello World\n";
+
+  printf("&a=0x%x &buffer=0x%x\n\n", &a, &buffer);
 
   printf("&b=0x%x &c=0x%x\n", &b, &c);
   printf("&p=0x%x p=0x%x\n", &p, p);
